@@ -1,5 +1,5 @@
 "use client";
-import React, {  } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "./Animated";
@@ -18,14 +18,14 @@ const Features = () => {
             POWERFUL FEATURES
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Everything You Need to{" "}
+            All-in-One ATS, HRMS & CRP{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Hire Smarter
+              Solutions
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive ATS platform combines cutting-edge AI with
-            intuitive design to revolutionize your recruitment process.
+            Explore features across all our products designed to scale your
+            hiring success.
           </p>
         </AnimatedSection>
 
@@ -60,4 +60,4 @@ const Features = () => {
   );
 };
 
-export default Features
+export default Features;

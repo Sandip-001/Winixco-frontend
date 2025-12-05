@@ -1,12 +1,9 @@
 "use client";
-import React, {  } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./Animated";
 import { home } from "@/services/Constants";
 
-
-
-// Benefits Section
 const Benefits = () => {
   return (
     <section
@@ -19,27 +16,31 @@ const Benefits = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
+        {/* Heading */}
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Why Choose TalentFlow?
+            Why Choose Winixco?
           </h2>
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Experience the future of recruitment with our innovative platform
+            Winixco helps companies stay efficient, connected, and future-ready. 
+            With automation, accuracy, and real-time syncing, every department works smarter — not harder.
           </p>
         </AnimatedSection>
 
+        {/* Feature Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {home.benefits.map((benefit, index) => (
+          {home.benefits.map((feature, index) => (
             <AnimatedSection key={index}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="text-center p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 hover:bg-white/20 transition-all"
               >
                 <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-white/20 flex items-center justify-center">
-                  <div className="text-white">{benefit.icon}</div>
+                  <span className="text-white">{feature.icon}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-purple-100">{benefit.description}</p>
+
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-purple-100">{feature.description}</p>
               </motion.div>
             </AnimatedSection>
           ))}
@@ -49,4 +50,4 @@ const Benefits = () => {
   );
 };
 
-export default Benefits
+export default Benefits;

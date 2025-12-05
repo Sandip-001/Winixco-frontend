@@ -1,11 +1,8 @@
 "use client";
-import React, {  } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 
 // CTA Section
 const CTA = () => {
@@ -21,10 +18,16 @@ const CTA = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4">
         <h2 className="text-4xl md:text-6xl font-bold mb-6">
-          Ready to Transform Your Hiring?
+          Transform the way your business
+          <span className="bg-gradient-to-r from-pink-400 to-yellow-300 bg-clip-text text-transparent">
+            {" "}
+            hires, manages & grows
+          </span>
         </h2>
+
         <p className="text-lg md:text-xl text-purple-100 mb-10">
-          Join 10,000+ HR teams using TalentFlow to hire smarter and faster
+          Winixco brings HRMS, ATS & CRM together — so your teams stay aligned,
+          productive and future-ready.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -32,19 +35,25 @@ const CTA = () => {
             size="lg"
             className="px-10 py-6 text-lg bg-white text-purple-700 font-bold rounded-xl shadow-lg hover:text-white hover:shadow-2xl hover:scale-105 transition-transform"
           >
-            Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+            {" "}
+            Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />{" "}
+          </Button>{" "}
           <Button
             size="lg"
             variant="outline"
             className="border-2 text-purple-700 px-10 py-6 text-lg font-bold rounded-xl hover:bg-white/10 transition-all"
           >
-            Book a Demo
+            {" "}
+            Book a Demo{" "}
           </Button>
         </div>
+
+        <p className="mt-6 text-sm text-purple-200">
+          No credit card required · Quick setup · Cancel anytime
+        </p>
       </div>
     </section>
   );
 };
 
-export default CTA
+export default CTA;

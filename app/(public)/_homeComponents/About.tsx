@@ -1,40 +1,45 @@
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, CheckCircle, Users, Target, Award, Sparkles } from 'lucide-react';
-import { home } from '@/services/Constants';
-
+import React from "react";
+import { motion, Variants } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Target,
+  Award,
+  Sparkles,
+} from "lucide-react";
+import { home } from "@/services/Constants";
 
 const AboutUs: React.FC = () => {
-
-  const containerVariants:Variants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
-  const itemVariants:Variants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
-  const imageVariants:Variants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
-    }
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
@@ -59,7 +64,9 @@ const AboutUs: React.FC = () => {
                   <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
                     <Users className="w-12 h-12 text-white" />
                   </div>
-                  <p className="text-gray-600 font-medium">Team Collaboration</p>
+                  <p className="text-gray-600 font-medium">
+                    Team Collaboration
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -107,7 +114,7 @@ const AboutUs: React.FC = () => {
             <motion.div
               animate={{
                 scale: [1, 1.2, 1],
-                rotate: [0, 90, 0]
+                rotate: [0, 90, 0],
               }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 -z-10"
@@ -162,7 +169,9 @@ const AboutUs: React.FC = () => {
                   className="text-center p-4 rounded-xl bg-gradient-to-br from-gray-50 to-blue-50 border border-gray-100"
                 >
                   <stat.icon className="w-8 h-8 mx-auto mb-2 text-blue-600" />
-                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {stat.value}
+                  </p>
                   <p className="text-xs text-gray-600 mt-1">{stat.label}</p>
                 </motion.div>
               ))}

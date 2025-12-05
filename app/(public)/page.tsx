@@ -10,6 +10,8 @@ import Pricing from "./_homeComponents/Pricing";
 import FAQ from "./_homeComponents/FAQ";
 import CTA from "./_homeComponents/CTA";
 import AboutUs from "./_homeComponents/About";
+import ModulesSection from "./_homeComponents/Modules";
+import HowItWorks from "./_homeComponents/HowItWorks";
 
 export default function Page() {
   return (
@@ -18,9 +20,11 @@ export default function Page() {
       <CompanySlider />
       <Features />
       <AboutUs />
+      <ModulesSection />
       <Benefits />
       <Testimonials />
       <Pricing />
+      <HowItWorks />
       <FAQ />
       <CTA />
     </div>
