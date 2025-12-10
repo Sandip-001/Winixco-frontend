@@ -31,7 +31,7 @@ export default function AboutUs() {
     <div className="min-h-screen bg-gray-50 text-gray-900">
 
       {/* HERO */}
-      <section className="py-28 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center">
+      <section className="py-28 bg-gradient-to-b from-white to-blue-50 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,8 @@ export default function AboutUs() {
         </motion.div>
       </section>
 
-      {/* COMPANY STORY TIMELINE */}
+      
+      {/* COMPANY STORY TIMELINE }
       <section className="py-24 bg-white">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
@@ -112,9 +113,9 @@ export default function AboutUs() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
-      {/* LEADERSHIP SECTION */}
+      {/* LEADERSHIP SECTION }
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3">Leadership Team</h2>
@@ -149,7 +150,7 @@ export default function AboutUs() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 text-center text-white">

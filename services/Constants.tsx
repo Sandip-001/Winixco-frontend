@@ -559,7 +559,7 @@ export const CONTACT_DATA: ContactData = {
         icon: Mail,
         title: "General inquires",
         description: "Email us at",
-        contact: "support@winixco.com",
+        contact: "info@winixco.com",
         color: "text-blue-600",
       },
       {
@@ -572,7 +572,7 @@ export const CONTACT_DATA: ContactData = {
       {
         icon: Phone,
         title: "Phone",
-        description: "India: +91 7022651144",
+        description: "India: +91 8639341304",
         contact: "Call us now",
         color: "text-green-600",
       },

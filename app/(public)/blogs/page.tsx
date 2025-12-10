@@ -41,7 +41,7 @@ export default function BlogPage() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section className="py-24 px-6 text-center bg-gradient-to-b from-purple-600 via-blue-600 to-indigo-700 text-white">
+      <section className="py-24 px-6 text-center bg-gradient-to-b from-white to-blue-50">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

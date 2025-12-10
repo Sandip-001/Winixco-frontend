@@ -35,7 +35,7 @@ export default function Careers() {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       
       {/* HERO */}
-      <section className="py-24 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-24 text-center bg-gradient-to-b from-white to-blue-50">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
