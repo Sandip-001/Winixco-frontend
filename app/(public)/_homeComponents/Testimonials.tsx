@@ -1,15 +1,9 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import {
-  Star,
-  Quote,
-} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import AnimatedSection from "./Animated";
 import { home } from "@/services/Constants";
+import { Quote, Star } from "lucide-react";
 
-
-// Testimonials Slider
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,6 +13,8 @@ const Testimonials = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const testimonial = home.testimonials[currentIndex];
 
   return (
     <section id="testimonials" className="py-24 bg-white">
@@ -39,58 +35,58 @@ const Testimonials = () => {
         </AnimatedSection>
 
         <div className="relative max-w-5xl mx-auto">
-          <div className="overflow-hidden">
-            {home.testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{
-                  opacity: index === currentIndex ? 1 : 0,
-                  x: index === currentIndex ? 0 : 100,
-                  display: index === currentIndex ? "block" : "none",
-                }}
-                transition={{ duration: 0.5 }}
-                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-12 shadow-xl"
-              >
-                <Quote className="w-12 h-12 text-purple-300 mb-6" />
-                <p className="text-2xl text-gray-800 mb-8 leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-3xl">
-                    {testimonial.image}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-gray-800">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-gray-600">{testimonial.role}</p>
-                    <p className="text-purple-600 font-semibold">
-                      {testimonial.company}
-                    </p>
-                  </div>
-                  <div className="ml-auto flex gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -60 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-12 shadow-xl"
+            >
+              <Quote className="w-12 h-12 text-purple-300 mb-6" />
 
+              <p className="text-2xl text-gray-800 mb-8 leading-relaxed italic">
+                "{testimonial.content}"
+              </p>
+
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-3xl">
+                  {testimonial.image}
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-gray-600">{testimonial.role}</p>
+                  <p className="text-purple-600 font-semibold">
+                    {testimonial.company}
+                  </p>
+                </div>
+
+                <div className="ml-auto flex gap-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Dots */}
           <div className="flex justify-center gap-2 mt-8">
             {home.testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
+                className={`h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? "bg-purple-600 w-8"
-                    : "bg-gray-300 hover:bg-gray-400"
+                    : "bg-gray-300 w-3 hover:bg-gray-400"
                 }`}
               />
             ))}
@@ -100,5 +96,5 @@ const Testimonials = () => {
     </section>
   );
 };
+export default Testimonials;
 
-export default Testimonials

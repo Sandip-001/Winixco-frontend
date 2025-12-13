@@ -1,14 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
 import {
-  Sparkles,
   Layers,
   BarChart3,
   Users,
   CheckCircle2,
   ShieldCheck,
-  Workflow,
-  LineChart,
   WorkflowIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -57,16 +53,12 @@ export default function FeaturesPage() {
     <main className="bg-white">
       {/* HERO */}
       <section className="py-24 text-center px-6 bg-gradient-to-b from-white to-blue-50">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-extrabold text-gray-900"
-        >
+        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">
           Powerful Features to Turbocharge Your{" "}
           <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Hiring & CRM
           </span>
-        </motion.h1>
+        </h1>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
           Everything you need to streamline recruitment, manage clients and
           scale your business — all in one platform.
@@ -75,17 +67,10 @@ export default function FeaturesPage() {
 
       {/* FEATURE GRID */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
-        >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {FEATURES_DATA.map((feature, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
               className="p-8 bg-white rounded-3xl border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white flex items-center justify-center shadow-md mb-5">
@@ -95,25 +80,24 @@ export default function FeaturesPage() {
                 {feature.title}
               </h3>
               <p className="text-gray-600">{feature.description}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       {/* CTA STRIP */}
       <section className="py-20 bg-gradient-to-r from-blue-700 to-purple-700 text-white text-center px-6">
-        <motion.h2
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          className="text-3xl md:text-4xl font-bold mb-4"
-        >
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Experience The Future of Hiring & Client Management
-        </motion.h2>
+        </h2>
         <p className="text-lg max-w-2xl mx-auto opacity-90 mb-8">
           Try Winixco now and transform the way your business grows.
         </p>
 
-        <Button size="lg" className="text-lg bg-white text-blue-700 hover:bg-blue-100">
+        <Button
+          size="lg"
+          className="text-lg bg-white text-blue-700 hover:bg-blue-100"
+        >
           Book a Live Demo
         </Button>
       </section>

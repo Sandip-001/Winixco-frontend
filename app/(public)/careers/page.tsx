@@ -1,6 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { Briefcase, Users, Target, HeartHandshake, ArrowRight } from "lucide-react";
+import {
+  Briefcase,
+  Users,
+  Target,
+  HeartHandshake,
+  ArrowRight,
+} from "lucide-react";
 import Link from "next/link";
 
 const openRoles = [
@@ -33,23 +39,13 @@ const openRoles = [
 export default function Careers() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
-      
       {/* HERO */}
       <section className="py-24 text-center bg-gradient-to-b from-white to-blue-50">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-5xl font-bold mb-6"
-        >
-          Build Your Future With Us
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-xl max-w-2xl mx-auto"
-        >
-          Join a passionate team shaping the future of CRM solutions across the globe.
-        </motion.p>
+        <h1 className="text-5xl font-bold mb-6">Build Your Future With Us</h1>
+        <p className="text-xl max-w-2xl mx-auto">
+          Join a passionate team shaping the future of CRM solutions across the
+          globe.
+        </p>
       </section>
 
       {/* CULTURE SECTION */}
@@ -57,7 +53,8 @@ export default function Careers() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Life at Our Company</h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            A culture built to encourage creativity, innovation, and collaboration.
+            A culture built to encourage creativity, innovation, and
+            collaboration.
           </p>
         </div>
 
@@ -79,16 +76,14 @@ export default function Careers() {
               desc: "We focus on employee happiness, growth, and well-being.",
             },
           ].map((item, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
               className="bg-white p-8 rounded-2xl shadow-lg text-center"
             >
               <div className="mb-4 flex justify-center">{item.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
               <p className="text-gray-600">{item.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -105,10 +100,8 @@ export default function Careers() {
 
           <div className="grid md:grid-cols-2 gap-10">
             {openRoles.map((role, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 className="p-6 rounded-xl shadow-md border bg-gray-50 hover:shadow-xl transition"
               >
                 <h3 className="text-2xl font-semibold mb-2">{role.title}</h3>
@@ -124,7 +117,7 @@ export default function Careers() {
                 >
                   Apply Now <ArrowRight className="w-4 h-4" />
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -132,7 +125,9 @@ export default function Careers() {
 
       {/* CTA SECTION */}
       <section className="py-24 text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <h2 className="text-4xl font-bold mb-6">Didn’t find a suitable role?</h2>
+        <h2 className="text-4xl font-bold mb-6">
+          Didn’t find a suitable role?
+        </h2>
         <p className="text-xl max-w-2xl mx-auto mb-8">
           We are always looking for great talent. Send us your resume!
         </p>

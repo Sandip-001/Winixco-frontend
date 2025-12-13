@@ -1,7 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
-import { Users, Target, Lightbulb, ShieldCheck, Linkedin } from "lucide-react";
-import Image from "next/image";
+import { Target, Lightbulb } from "lucide-react";
 import Link from "next/link";
 
 const leaders = [
@@ -32,27 +30,24 @@ export default function AboutUs() {
 
       {/* HERO */}
       <section className="py-28 bg-gradient-to-b from-white to-blue-50 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <h1
+          
           className="text-5xl font-bold mb-6"
         >
           Empowering Businesses with Smart CRM Innovation
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        </h1>
+        <p
+          
           className="text-xl max-w-3xl mx-auto"
         >
           We help companies build stronger customer relationships through intelligent automation and seamless workflows.
-        </motion.p>
+        </p>
       </section>
 
       {/* OUR MISSION / VISION */}
       <section className="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <div
+          
           className="bg-white p-10 rounded-3xl shadow-xl border"
         >
           <Target className="w-12 h-12 text-blue-600 mb-4" />
@@ -61,11 +56,10 @@ export default function AboutUs() {
             To simplify customer management through powerful yet user-friendly CRM tools,
             enabling businesses of every size to scale faster and smarter.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <div
+          
           className="bg-white p-10 rounded-3xl shadow-xl border"
         >
           <Lightbulb className="w-12 h-12 text-purple-600 mb-4" />
@@ -74,7 +68,7 @@ export default function AboutUs() {
             To be a global leader in CRM innovation — transforming how teams connect,
             collaborate and grow with their customers.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       
