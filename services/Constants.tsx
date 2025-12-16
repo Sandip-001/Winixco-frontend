@@ -423,7 +423,7 @@ export const home: HomeContent = {
   plans: [
     {
       name: "Starter",
-      price: "$49",
+      price: "₹49",
       period: "per month",
       features: [
         "Up to 5 active job postings",
@@ -434,7 +434,7 @@ export const home: HomeContent = {
     },
     {
       name: "Pro",
-      price: "$99",
+      price: "₹99",
       period: "per month",
       features: [
         "Unlimited job postings",
