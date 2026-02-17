@@ -18,7 +18,7 @@ const Header = () => {
 
   // Remove Blogs and Careers
   const navigation = home.navigation.filter(
-    (item) => item.name !== "Blogs" && item.name !== "Careers"
+    (item) => item.name !== "Blog" && item.name !== "Careers"
   );
 
   return (
