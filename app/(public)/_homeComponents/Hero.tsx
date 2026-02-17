@@ -91,11 +91,8 @@ const Hero = () => {
             >
               Hire faster with a{" "}
               <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(90deg, #1FC8DB 0%, #7FD8E7 100%)",
-                }}
+                className="bg-gradient-to-r from-[#13afdc] to-[#0d0d0d] bg-clip-text text-transparent"
+                
               >
                 clean ATS workflow
               </span>
