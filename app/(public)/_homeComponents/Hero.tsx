@@ -1,147 +1,344 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
-import { Check, ArrowRight, PlayCircle, Users, UserCog, Briefcase } from "lucide-react";
+import {
+  ArrowRight,
+  PlayCircle,
+  Users,
+  UserCog,
+  Briefcase,
+  Check,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { home } from "@/services/Constants";
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-24 px-4 overflow-hidden bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      {/* Background Animation */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-          transition={{ duration: 20, repeat: Infinity }}
-          className="absolute -top-20 -left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply blur-3xl opacity-30"
+    <section
+      className="
+        relative overflow-hidden
+        bg-white
+        pt-28 pb-20 md:pt-32 md:pb-24
+      "
+    >
+      {/* Background grid + Java/Botticelli glow */}
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(15,23,42,1) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,1) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
         />
+
+        {/* Top glow */}
         <motion.div
-          animate={{ scale: [1.2, 1, 1.2], rotate: [90, 0, 90] }}
-          transition={{ duration: 25, repeat: Infinity }}
-          className="absolute top-40 -right-20 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply blur-3xl opacity-30"
+          aria-hidden
+          initial={{ opacity: 0.35, scale: 0.95 }}
+          animate={{ opacity: [0.25, 0.4, 0.25], scale: [0.95, 1.05, 0.95] }}
+          transition={{ duration: 12, repeat: Infinity }}
+          className="absolute -top-24 -left-24 h-80 w-80 rounded-full blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(31,200,219,0.45) 0%, transparent 60%)",
+          }}
         />
+
+        {/* Bottom glow */}
         <motion.div
-          animate={{ scale: [1, 1.3, 1], rotate: [0, -90, 0] }}
-          transition={{ duration: 30, repeat: Infinity }}
-          className="absolute -bottom-20 left-1/2 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply blur-3xl opacity-30"
+          aria-hidden
+          initial={{ opacity: 0.25, scale: 0.95 }}
+          animate={{ opacity: [0.18, 0.32, 0.18], scale: [0.95, 1.08, 0.95] }}
+          transition={{ duration: 14, repeat: Infinity }}
+          className="absolute -bottom-32 right-0 h-[28rem] w-[28rem] rounded-full blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(127,216,231,0.55) 0%, transparent 62%)",
+          }}
         />
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10 text-center">
-        {/* Badge */}
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6"
-        >
-          🚀 All-In-One Talent & Workforce Platform
-        </motion.span>
-
-        {/* Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight"
-        >
-          Build Powerful{" "}
-          <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
-            ATS, HRMS & CRM
-          </span>{" "}
-          Solutions
-        </motion.h1>
-
-        {/* Subtext */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto"
-        >
-          Winixco helps organizations simplify hiring, manage employees,
-          and enhance client relationships — all in one platform.
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-        >
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-xl hover:scale-105 transition-all"
-          >
-            Book a Demo <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="px-8 py-6 text-lg font-semibold rounded-xl border-2 hover:bg-gray-50"
-          >
-            <PlayCircle className="mr-2 w-5 h-5" />
-            Watch Overview
-          </Button>
-        </motion.div>
-
-        {/* Trust checklist */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 flex justify-center gap-4 text-gray-600 text-sm"
-        >
-          <Check className="w-5 h-5 text-green-500" /> No credit card required
-          <span className="mx-2">•</span>
-          <Check className="w-5 h-5 text-green-500" /> 14-day free trial
-        </motion.div>
-
-        {/* Product Highlight Cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
-          {[
-            { icon: Users, title: "ATS", desc: "Automate hiring, AI screening & smoother interviews." },
-            { icon: UserCog, title: "HRMS", desc: "Employee onboarding, payroll & performance." },
-            { icon: Briefcase, title: "CRM", desc: "Manage clients & strengthen candidate relationships." },
-          ].map((item, i) => (
+      <div className="relative mx-auto max-w-7xl px-4">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          {/* Left: copy */}
+          <div className="text-center lg:text-left">
+            {/* Badge */}
             <motion.div
-              key={i}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-2xl shadow-lg border border-purple-100"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium"
+              style={{
+                borderColor: "rgba(31,200,219,0.35)",
+                backgroundColor: "rgba(31,200,219,0.10)",
+                color: "#065F67",
+              }}
             >
-              <item.icon className="w-10 h-10 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
+              <span
+                className="inline-block h-2 w-2 rounded-full"
+                style={{ backgroundColor: "#1FC8DB" }}
+              />
+              All-in-one ATS • HRMS • CRM for modern teams
             </motion.div>
-          ))}
-        </motion.div>
 
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.55 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {home.stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg"
+            {/* Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.05 }}
+              className="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 md:text-6xl"
             >
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
-                {stat.value}
+              Hire faster with a{" "}
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(90deg, #1FC8DB 0%, #7FD8E7 100%)",
+                }}
+              >
+                clean ATS workflow
+              </span>
+            </motion.h1>
+
+            {/* Subtext */}
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.12 }}
+              className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl"
+            >
+              Winixco streamlines pipelines, interview scheduling, and employee
+              operations—so your team can focus on decisions, not admin work.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.2 }}
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center lg:justify-start justify-center"
+            >
+              <Button
+                size="lg"
+                className="rounded-xl px-7 py-6 text-base font-semibold shadow-md text-white"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #1FC8DB 0%, #7FD8E7 100%)",
+                }}
+              >
+                Book a Demo <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-xl px-7 py-6 text-base font-semibold border-slate-300"
+              >
+                <PlayCircle className="mr-2 h-5 w-5" />
+                Watch Overview
+              </Button>
+            </motion.div>
+
+            {/* Trust line */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.55, delay: 0.28 }}
+              className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-600 lg:justify-start"
+            >
+              <span className="inline-flex items-center gap-2">
+                <Check className="h-4 w-4 text-emerald-500" />
+                No credit card required
+              </span>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <span className="inline-flex items-center gap-2">
+                <Check className="h-4 w-4 text-emerald-500" />
+                14-day free trial
+              </span>
+            </motion.div>
+
+            {/* Feature chips */}
+            <div className="mt-10 flex flex-wrap justify-center gap-3 lg:justify-start">
+              {[
+                { icon: Users, title: "ATS", desc: "Pipeline + sourcing" },
+                { icon: UserCog, title: "HRMS", desc: "Onboarding + reviews" },
+                { icon: Briefcase, title: "CRM", desc: "Clients + pools" },
+              ].map((f, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 rounded-2xl border bg-white px-4 py-3"
+                  style={{ borderColor: "rgba(15,23,42,0.10)" }}
+                >
+                  <div
+                    className="grid h-10 w-10 place-items-center rounded-xl"
+                    style={{ backgroundColor: "rgba(31,200,219,0.14)" }}
+                  >
+                    <f.icon className="h-5 w-5 text-slate-800" />
+                  </div>
+                  <div className="leading-tight">
+                    <div className="text-sm font-semibold text-slate-900">
+                      {f.title}
+                    </div>
+                    <div className="text-xs text-slate-600">{f.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right preview stays same, only accent changed */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.18 }}
+            className="relative"
+          >
+            <div className="rounded-3xl border bg-white shadow-xl border-slate-200">
+              {/* Fake topbar */}{" "}
+              <div
+                className="flex items-center justify-between border-b px-5 py-4"
+                style={{ borderColor: "rgba(15,23,42,0.08)" }}
+              >
+                {" "}
+                <div className="flex items-center gap-3">
+                  {" "}
+                  <div className="flex gap-1.5">
+                    {" "}
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />{" "}
+                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />{" "}
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-400/80" />{" "}
+                  </div>{" "}
+                  <div className="text-sm font-semibold text-slate-900">
+                    Winixco ATS
+                  </div>{" "}
+                </div>{" "}
+                <div className="text-xs text-slate-500">Today</div>{" "}
+              </div>{" "}
+              {/* Fake content */}{" "}
+              <div className="p-5">
+                {" "}
+                <div className="grid gap-4 md:grid-cols-2">
+                  {" "}
+                  <div
+                    className="rounded-2xl border p-4"
+                    style={{ borderColor: "rgba(15,23,42,0.10)" }}
+                  >
+                    {" "}
+                    <div className="text-xs font-semibold text-slate-500">
+                      Pipeline
+                    </div>{" "}
+                    <div className="mt-2 space-y-2">
+                      {" "}
+                      {["Applied", "Screening", "Interview", "Offer"].map(
+                        (t) => (
+                          <div
+                            key={t}
+                            className="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2"
+                          >
+                            {" "}
+                            <span className="text-sm font-medium text-slate-800">
+                              {t}
+                            </span>{" "}
+                            <span className="text-xs text-slate-500">
+                              +12
+                            </span>{" "}
+                          </div>
+                        ),
+                      )}{" "}
+                    </div>{" "}
+                  </div>{" "}
+                  <div
+                    className="rounded-2xl border p-4"
+                    style={{ borderColor: "rgba(15,23,42,0.10)" }}
+                  >
+                    {" "}
+                    <div className="text-xs font-semibold text-slate-500">
+                      Upcoming interviews
+                    </div>{" "}
+                    <div className="mt-3 space-y-2">
+                      {" "}
+                      {[
+                        {
+                          name: "A. Roy",
+                          role: "Frontend Dev",
+                          time: "11:00 AM",
+                        },
+                        {
+                          name: "S. Das",
+                          role: "Sales Lead",
+                          time: "02:30 PM",
+                        },
+                        { name: "K. Singh", role: "HR Ops", time: "05:00 PM" },
+                      ].map((x) => (
+                        <div
+                          key={x.name}
+                          className="flex items-center justify-between rounded-xl px-3 py-2 bg-white"
+                        >
+                          {" "}
+                          <div>
+                            {" "}
+                            <div className="text-sm font-semibold text-slate-900">
+                              {x.name}
+                            </div>{" "}
+                            <div className="text-xs text-slate-500">
+                              {x.role}
+                            </div>{" "}
+                          </div>{" "}
+                          <div
+                            className="rounded-full px-3 py-1 text-xs font-semibold"
+                            style={{
+                              backgroundColor: "rgba(5,245,228,0.18)",
+                              color: "#064E47",
+                            }}
+                          >
+                            {" "}
+                            {x.time}{" "}
+                          </div>{" "}
+                        </div>
+                      ))}{" "}
+                    </div>{" "}
+                  </div>{" "}
+                </div>{" "}
+                {/* Stats row from your constants */}{" "}
+                <div className="mt-5 grid grid-cols-2 gap-3">
+                  {" "}
+                  {home.stats.slice(0, 2).map((s, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-2xl border p-4"
+                      style={{ borderColor: "rgba(15,23,42,0.10)" }}
+                    >
+                      {" "}
+                      <div className="text-xs font-semibold text-slate-500">
+                        {s.label}
+                      </div>{" "}
+                      <div className="mt-2 text-2xl font-extrabold text-slate-900">
+                        {s.value}
+                      </div>{" "}
+                      <div className="mt-2 h-1.5 w-full rounded-full bg-slate-100">
+                        {" "}
+                        <div
+                          className="h-1.5 rounded-full"
+                          style={{ width: "62%", backgroundColor: "#05F5E4" }}
+                        />{" "}
+                      </div>{" "}
+                    </div>
+                  ))}{" "}
+                </div>{" "}
               </div>
-              <div className="text-gray-700 font-medium">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+            </div>
+
+            {/* Accent glow */}
+            <div
+              className="pointer-events-none absolute -inset-2 -z-10 rounded-[2rem] opacity-60 blur-2xl"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(31,200,219,0.45), rgba(127,216,231,0.35))",
+              }}
+            />
+          </motion.div>
+        </div>
       </div>
     </section>
   );

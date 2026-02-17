@@ -13,9 +13,13 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Remove Blogs and Careers
+  const navigation = home.navigation.filter(
+    (item) => item.name !== "Blogs" && item.name !== "Careers"
+  );
 
   return (
     <motion.header
@@ -28,7 +32,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
 
-          {/* 🔥 Logo */}
+          {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link href="/">
               <img
@@ -39,13 +43,13 @@ const Header = () => {
             </Link>
           </motion.div>
 
-          {/* 🖥️ Desktop Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {home.navigation.map((item) => (
+            {navigation.map((item) => (
               <motion.div key={item.name} whileHover={{ scale: 1.05 }}>
                 <Link
                   href={item.href}
-                  className="text-gray-700 hover:text-purple-600 font-medium"
+                  className="text-gray-700 hover:text-[#1FC8DB] font-medium"
                 >
                   {item.name}
                 </Link>
@@ -57,12 +61,18 @@ const Header = () => {
             <Button variant="ghost" className="font-medium">
               Sign In
             </Button>
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium">
+            <Button
+              className="text-white font-medium"
+              style={{
+                background:
+                  "linear-gradient(90deg, #1FC8DB 0%, #7FD8E7 100%)",
+              }}
+            >
               Start Free Trial
             </Button>
           </div>
 
-          {/* 📱 Mobile Menu Icon */}
+          {/* Mobile Menu Icon */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100"
@@ -71,7 +81,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* 📱 Mobile Drawer Menu */}
+        {/* Mobile Drawer Menu */}
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -80,11 +90,11 @@ const Header = () => {
             className="md:hidden pb-6"
           >
             <div className="flex flex-col space-y-4">
-              {home.navigation.map((item) => (
+              {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-purple-600 font-medium"
+                  className="text-gray-700 hover:text-[#1FC8DB] font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -93,7 +103,13 @@ const Header = () => {
               <Button variant="outline" className="w-full">
                 Sign In
               </Button>
-              <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600">
+              <Button
+                className="w-full text-white"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #1FC8DB 0%, #7FD8E7 100%)",
+                }}
+              >
                 Start Free Trial
               </Button>
             </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, {  } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   Accordion,
@@ -10,28 +10,26 @@ import {
 import AnimatedSection from "./Animated";
 import { home } from "@/services/Constants";
 
-
-
 // FAQ Section
 const FAQ = () => {
   return (
     <section
       id="faq"
-      className="py-24 bg-gradient-to-b from-white to-purple-50"
+      className="py-24 bg-gradient-to-b from-white to-[#c3dbe0]/40"
     >
       <div className="max-w-4xl mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-2 bg-[#13afdc]/10 text-[#13afdc] rounded-full text-sm font-semibold mb-4">
             FAQ
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0d0d0d]">
             Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#13afdc] to-[#0d0d0d] bg-clip-text text-transparent">
               Questions
             </span>
           </h2>
-          <p className="text-xl text-gray-600">
-            Everything you need to know about TalentFlow
+          <p className="text-xl text-[#7c7a7c]">
+            Everything you need to know about Winixco
           </p>
         </AnimatedSection>
 
@@ -47,12 +45,12 @@ const FAQ = () => {
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border-0 px-6"
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all border border-[#c3dbe0]/60 px-6"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline py-6">
+                  <AccordionTrigger className="text-left font-semibold text-lg text-[#0d0d0d] hover:no-underline py-6">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-6 leading-relaxed">
+                  <AccordionContent className="text-[#7c7a7c] pb-6 leading-relaxed">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -65,4 +63,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ
+export default FAQ;
