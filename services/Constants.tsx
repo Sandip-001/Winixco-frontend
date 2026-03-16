@@ -148,6 +148,7 @@ export interface HomeContent {
 
 export const home: HomeContent = {
   navigation: [
+    {name: "Services", href: "/services"},
     { name: "Features", href: "/features" },
     { name: "Blog", href: "/blogs" },
     { name: "Careers", href: "/careers" },

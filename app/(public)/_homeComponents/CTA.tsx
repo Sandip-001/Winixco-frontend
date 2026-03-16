@@ -3,9 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 // CTA Section
 const CTA = () => {
+  const router = useRouter();
   return (
     <section className="py-24 bg-[#2563eb] text-white text-center relative overflow-hidden">
       <motion.div
@@ -29,7 +31,8 @@ const CTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="px-10 py-6 text-lg bg-white text-[#2563eb] font-medium rounded-xl shadow-lg hover:bg-[#0ea5b7] hover:text-white hover:shadow-2xl hover:scale-105 transition-transform"
+            className="px-10 py-6 text-lg bg-white text-[#2563eb] font-medium rounded-xl shadow-lg hover:bg-white hover:text-[#2563eb] hover:shadow-2xl hover:scale-105 transition-transform"
+            onClick={()=>router.push("#pricing")}
           >
             Start Your Free Trial Today<ArrowRight className="ml-2 w-5 h-5" />
           </Button>

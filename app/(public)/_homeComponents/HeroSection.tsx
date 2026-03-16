@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function HeroSection() {
+  const router = useRouter();
   return (
     <section className="w-full bg-[linear-gradient(135deg,_#FFFFFF_0%,_#F9FAFB_50%,_#DBEAFE_100%)] py-26 md:py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -26,7 +27,10 @@ export default function HeroSection() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 mt-8">
-            <Button className="w-full sm:w-auto bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-6 text-base rounded-xl">
+            <Button
+              className="w-full sm:w-auto bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-6 text-base rounded-xl"
+              onClick={() => router.push("#pricing")}
+            >
               Start Free Trial
             </Button>
 
@@ -63,7 +67,6 @@ export default function HeroSection() {
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
@@ -73,7 +76,9 @@ function StatCard({ title, value }: { title: string; value: string }) {
   return (
     <div className="border-l-4 border-[#2563eb] bg-gray-50 rounded-xl p-4 sm:p-5">
       <p className="text-xs sm:text-sm text-gray-500">{title}</p>
-      <p className="text-lg sm:text-xl font-bold text-[#2563eb] mt-1">{value}</p>
+      <p className="text-lg sm:text-xl font-bold text-[#2563eb] mt-1">
+        {value}
+      </p>
     </div>
   );
 }

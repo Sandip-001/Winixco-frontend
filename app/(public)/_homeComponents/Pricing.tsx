@@ -114,7 +114,7 @@ const MainPricingCard = () => {
   );
 
   return (
-    <section className="py-16 bg-white">
+    <section id="pricing" className="py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4">
         <Card className="rounded-3xl shadow-xl border border-[#c3dbe0] overflow-hidden">
           <CardContent className="p-10 text-center">
@@ -247,7 +247,7 @@ const CtaSection = () => {
   const router = useRouter();
 
   return (
-    <section className="py-20 bg-white">
+    <section  className="py-20 bg-white">
       <div className="max-w-4xl mx-auto text-center px-4">
         <h2 className="text-4xl font-bold text-[#0d0d0d] mb-6">
           Need Bulk Pricing or a Demo?

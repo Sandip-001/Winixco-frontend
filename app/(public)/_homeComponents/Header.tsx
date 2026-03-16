@@ -5,10 +5,12 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { home } from "@/services/Constants";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -58,11 +60,9 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="font-medium">
-              Sign In
-            </Button>
             <Button
               className="text-white font-medium bg-[#2563eb]"
+              onClick={()=>router.push("#pricing")}
             >
               Start Free Trial
             </Button>
@@ -96,11 +96,9 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="outline" className="w-full">
-                Sign In
-              </Button>
               <Button
                 className="w-full text-white bg-[#2563eb]"
+                onClick={()=>router.push("#pricing")}
                 
               >
                 Start Free Trial
