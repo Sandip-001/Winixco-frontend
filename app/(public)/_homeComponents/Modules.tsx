@@ -42,12 +42,12 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, index }) => {
                 rotate: isHovered ? 5 : 0,
               }}
               transition={{ duration: 0.3 }}
-              className="w-20 h-20 bg-gradient-to-br from-[#13afdc] to-[#c3dbe0] rounded-2xl flex items-center justify-center shadow-lg"
+              className="w-20 h-20 bg-[#2563eb] rounded-2xl flex items-center justify-center shadow-lg"
             >
               <module.icon className="w-10 h-10 text-white" />
             </motion.div>
 
-            <Badge className="bg-[#13afdc]/10 text-[#13afdc] border-[#13afdc]/20">
+            <Badge className="bg-blue-50 text-[#2563eb] border-[#13afdc]/20">
               New
             </Badge>
           </div>
@@ -70,7 +70,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, index }) => {
           </motion.div>
 
           {/* Title */}
-          <h3 className="text-2xl md:text-3xl font-bold text-[#0d0d0d] mb-4 group-hover:text-[#13afdc] transition-colors">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#0d0d0d] mb-4 group-hover:text-[#2563eb] transition-colors">
             {module.title}
           </h3>
 
@@ -93,7 +93,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, index }) => {
                 transition={{ delay: index * 0.2 + idx * 0.1 }}
                 className="flex items-center gap-2 bg-[#c3dbe0]/30 rounded-lg p-3"
               >
-                <feature.icon className="w-4 h-4 text-[#13afdc]" />
+                <feature.icon className="w-4 h-4 text-[#2563eb]" />
                 <span className="text-sm font-medium text-[#0d0d0d]">
                   {feature.label}
                 </span>
@@ -104,7 +104,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, index }) => {
           {/* CTA Button */}
           <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
             <Button
-              className="w-full bg-gradient-to-r from-[#13afdc] to-[#c3dbe0] text-white font-semibold hover:shadow-xl"
+              className="w-full bg-[#2563eb] text-white font-semibold hover:shadow-xl"
               size="lg"
             >
               Learn More
@@ -113,7 +113,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, index }) => {
           </motion.div>
 
           {/* Checkmark */}
-          <div className="absolute top-4 right-4 w-8 h-8 bg-[#13afdc] rounded-full flex items-center justify-center shadow-lg">
+          <div className="absolute top-4 right-4 w-8 h-8 bg-[#2563eb] rounded-full flex items-center justify-center shadow-lg">
             <CheckCircle className="w-5 h-5 text-white" />
           </div>
         </CardContent>
@@ -134,7 +134,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module, index }) => {
 
 const ModulesSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white via-[#c3dbe0]/30 to-white relative overflow-hidden">
+    <section className="py-16 md:py-16 bg-gradient-to-b from-white via-[#c3dbe0]/30 to-white relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -152,19 +152,16 @@ const ModulesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 px-6 py-2 bg-[#13afdc]/10 text-[#13afdc] border-0">
+          <Badge className="mb-4 px-6 py-2 bg-blue-50 text-[#2563eb] border-0 font-bold">
             <Sparkles className="w-4 h-4 mr-2 inline" />
             {home.module.badge}
           </Badge>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0d0d0d] mb-6">
             {home.module.title}{" "}
-            <span className="bg-gradient-to-r from-[#13afdc] to-[#c3dbe0] bg-clip-text text-transparent">
-              Offers
-            </span>
           </h2>
 
-          <p className="text-lg md:text-xl text-[#7c7a7c] max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-black max-w-3xl mx-auto">
             {home.module.subtitle}
           </p>
         </motion.div>
@@ -184,7 +181,7 @@ const ModulesSection: React.FC = () => {
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <Card className="bg-gradient-to-r from-[#13afdc] to-[#c3dbe0] border-0 max-w-4xl mx-auto">
+          <Card className="bg-[#2563eb] border-0 max-w-4xl mx-auto">
             <CardContent className="p-8 md:p-12">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
@@ -195,7 +192,7 @@ const ModulesSection: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-white text-[#13afdc] hover:bg-gray-100 font-semibold"
+                  className="bg-white text-[#2563eb] hover:bg-gray-100 font-semibold"
                 >
                   Start Free Trial
                   <Sparkles className="ml-2 w-5 h-5" />

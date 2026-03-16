@@ -26,10 +26,7 @@ const ChooseWinixco = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-gray-900"
         >
-          ⭐ Why Businesses{" "}
-          <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Choose Winixco
-          </span>
+          ⭐ Why Businesses Choose Winixco
         </motion.h2>
 
         {/* Feature Grid */}
@@ -43,7 +40,7 @@ const ChooseWinixco = () => {
               viewport={{ once: true }}
               className="bg-white border border-gray-200 p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 flex items-center gap-4"
             >
-              <item.icon className="w-8 h-8 text-purple-600" />
+              <item.icon className="w-8 h-8 text-[#2563eb]" />
               <p className="text-lg text-gray-700 font-medium">{item.text}</p>
             </motion.div>
           ))}
@@ -78,14 +75,14 @@ const WeLoveToHearFromYou = () => {
         <div className="mt-10 flex flex-wrap justify-center gap-6">
           <Link
             href="#contact"
-            className="px-8 py-4 text-lg font-semibold rounded-xl bg-purple-600 hover:bg-purple-700 text-white transition-all hover:scale-105"
+            className="px-8 py-4 text-lg font-semibold rounded-xl bg-[#2563eb] hover:bg-blue-700 text-white transition-all hover:scale-105"
           >
             👉 Send Message
           </Link>
 
           <Link
             href="#book-demo"
-            className="px-8 py-4 text-lg font-semibold rounded-xl border-2 border-purple-600 text-purple-700 hover:bg-purple-50 transition-all hover:scale-105"
+            className="px-8 py-4 text-lg font-semibold rounded-xl border-2 border-blue-600 text-[#2563eb] hover:bg-purple-50 transition-all hover:scale-105"
           >
             👉 Book a Demo
           </Link>

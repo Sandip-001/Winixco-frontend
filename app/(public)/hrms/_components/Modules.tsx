@@ -23,14 +23,12 @@ const ModulesOverview: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">
+          <Badge className="mb-4 bg-blue-50 text-[#2563eb] border-purple-200">
             Core Modules
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            HRMS{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Modules Overview
-            </span>
+            HRMS Modules Overview
+           
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive HR management tools to streamline every aspect of your

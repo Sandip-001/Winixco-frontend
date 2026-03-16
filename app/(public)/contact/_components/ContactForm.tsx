@@ -142,7 +142,7 @@ const ContactForm: React.FC = () => {
               <Button
                 onClick={handleSubmit}
                 size="lg"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+                className="w-full bg-[#2563eb] hover:from-purple-700 hover:to-pink-700 text-white"
               >
                 Send Message
                 <Send className="ml-2 w-5 h-5" />

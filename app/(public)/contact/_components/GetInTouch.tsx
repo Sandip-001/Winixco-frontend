@@ -25,7 +25,7 @@ const GetInTouch: React.FC = () => {
           className="text-4xl md:text-5xl font-extrabold text-gray-900"
         >
           {CONTACT_DATA.getInTouch.title}
-          <span className="block mt-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <span className="block mt-2 bg-[#2563eb] bg-clip-text text-transparent">
             Let’s Connect
           </span>
         </motion.h2>
@@ -64,7 +64,7 @@ const GetInTouch: React.FC = () => {
 
               <p className="text-gray-600 text-sm mb-2">{method.description}</p>
 
-              <p className="font-semibold text-purple-700">{method.contact}</p>
+              <p className="font-semibold text-[#2563eb]">{method.contact}</p>
             </motion.div>
           ))}
         </div>

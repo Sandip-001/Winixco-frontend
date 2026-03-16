@@ -29,10 +29,7 @@ const PartnerWithUsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-5xl font-extrabold text-gray-900"
         >
-          🤝 Partner With{" "}
-          <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Winixco
-          </span>
+          🤝 Partner With Winixco
         </motion.h2>
 
         <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
@@ -49,7 +46,7 @@ const PartnerWithUsSection = () => {
               transition={{ delay: index * 0.1 }}
               className="flex items-center gap-3"
             >
-              <BadgeCheck className="text-purple-600 w-6 h-6" />
+              <BadgeCheck className="text-[#2563eb] w-6 h-6" />
               <p className="text-gray-700 font-medium">{item}</p>
             </motion.div>
           ))}
@@ -60,7 +57,7 @@ const PartnerWithUsSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           className="mt-12"
         >
-          <Button className="px-10 py-5 text-lg bg-purple-600 text-white font-bold rounded-xl shadow-lg hover:bg-purple-700 hover:scale-105 transition-all">
+          <Button className="px-10 py-5 text-lg bg-[#2563eb] text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 hover:scale-105 transition-all">
             Become a Partner
           </Button>
         </motion.div>

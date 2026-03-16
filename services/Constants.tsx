@@ -168,46 +168,52 @@ export const home: HomeContent = {
 
   features: [
     {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: "AI-Powered Screening",
+      //icon: <Sparkles className="w-6 h-6" />,
+      icon: "🤖",
+      title: "AI Resume Screening",
       description:
-        "Advanced AI algorithms automatically screen and rank candidates based on job requirements, saving hours of manual work.",
+        "Automatically parse and rank resumes using advanced AI. Reduce screening time by 80% and find top candidates instantly.",
       color: "from-purple-500 to-pink-500",
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Collaborative Hiring",
+      //icon: <Users className="w-6 h-6" />,
+      icon: "🎯",
+      title: "Smart Candidate Matching",
       description:
-        "Enable seamless collaboration between hiring managers, recruiters, and team members with real-time feedback.",
+        "ML-powered matching algorithm identifies the best-fit candidates based on skills, experience, and cultural fit.",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
+      //icon: <BarChart3 className="w-6 h-6" />,
+      icon: "📅",
+      title: "Interview Scheduling",
       description:
-        "Set up custom workflows to automate repetitive tasks like interview scheduling, email notifications, and status updates.",
-      color: "from-orange-500 to-red-500",
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description:
-        "Get deep insights into your hiring funnel with comprehensive reports and real-time dashboards.",
+        "Automated scheduling with calendar sync, reminders, and video interview integration. No back-and-forth emails.",
       color: "from-green-500 to-emerald-500",
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Time-to-Hire Reduction",
+      //icon: <Clock className="w-6 h-6" />,
+      icon: "🤝",
+      title: "Recruitment CRM",
       description:
-        "Reduce your hiring timeline by 60% with streamlined processes and intelligent automation.",
+        "Build and nurture your talent community. Stay connected with passive candidates for future opportunities.",
       color: "from-indigo-500 to-purple-500",
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
+      //icon: <Shield className="w-6 h-6" />,
+      icon: "👥",
+      title: "HRMS & Employee Management",
       description:
-        "SOC2 and ISO27001 certified platform ensuring your candidate data is always protected.",
+        "Seamless transition from recruitment to onboarding. Manage employee data, documents, and lifecycle in one place.",
       color: "from-teal-500 to-blue-500",
+    },
+    {
+      //icon: <Zap className="w-6 h-6" />,
+      icon: "📊",
+      title: "Advanced Analytics",
+      description:
+        "Real-time insights into hiring metrics, time-to-hire, cost-per-hire, and team productivity dashboards.",
+      color: "from-orange-500 to-red-500",
     },
   ],
 
@@ -314,7 +320,7 @@ export const home: HomeContent = {
 
   module : {
     badge: "OUR SOLUTIONS",
-    title: "Modules We",
+    title: "Modules We Offers",
     subtitle:
       "Powerful tools designed to streamline your recruitment and HR operations",
     modules: [

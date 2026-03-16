@@ -29,10 +29,7 @@ const TechnicalSupportSection = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-extrabold text-gray-900"
           >
-            🛠️ Technical Support &{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Assistance
-            </span>
+            🛠️ Technical Support & Assistance
           </motion.h2>
 
           <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
@@ -51,7 +48,7 @@ const TechnicalSupportSection = () => {
               transition={{ delay: index * 0.1 }}
               className="flex items-center gap-3"
             >
-              <HelpCircle className="text-purple-600 w-6 h-6" />
+              <HelpCircle className="text-[#2563eb] w-6 h-6" />
               <p className="text-gray-700 font-medium">{item}</p>
             </motion.div>
           ))}
@@ -60,7 +57,7 @@ const TechnicalSupportSection = () => {
         <div className="text-center mt-12">
           <Button
             variant="outline"
-            className="px-10 py-5 text-lg font-bold text-purple-700 border-2 rounded-xl hover:bg-purple-100 transition-all"
+            className="px-10 py-5 text-lg font-bold text-blue-700 border-2 rounded-xl hover:bg-purple-100 transition-all"
           >
             Contact Support
           </Button>

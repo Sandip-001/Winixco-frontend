@@ -42,7 +42,7 @@ const OverviewSection: React.FC = () => {
             >
               <Card className="h-full hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-[#2563eb] rounded-2xl flex items-center justify-center mb-6">
                     <Sparkles className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">

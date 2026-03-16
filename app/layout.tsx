@@ -6,6 +6,9 @@ import { AuthProvider } from "./provider";
 export const metadata: Metadata = {
   title: "ATS System",
   description: "Applicant Tracking System",
+  icons:{
+    icon: "./favicon.svg"
+  }
 };
 
 export default function RootLayout({

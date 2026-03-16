@@ -12,15 +12,20 @@ import CTA from "./_homeComponents/CTA";
 import AboutUs from "./_homeComponents/About";
 import ModulesSection from "./_homeComponents/Modules";
 import HowItWorks from "./_homeComponents/HowItWorks";
+import HeroSection from "./_homeComponents/HeroSection";
+import StatsSection from "./_homeComponents/StatsSection";
+import TestimonialsSection from "./_homeComponents/TestiMonialSection";
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-white">
-      <Hero />
+      <HeroSection />
       <CompanySlider />
       <Features />
+      <StatsSection />
       <AboutUs />
       <ModulesSection />
+      <TestimonialsSection />
       <Benefits />
       <Testimonials />
       <Pricing />

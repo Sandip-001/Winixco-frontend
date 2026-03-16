@@ -24,14 +24,11 @@ const WorkflowProcess: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-green-100 text-green-700 border-green-200">
+          <Badge className="mb-4 bg-blue-50 text-[#2563eb] border-blue-200">
             Simple Process
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            How{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              CRM Works
-            </span>
+            How CRM Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Four simple steps to revolutionize your CRM Software
@@ -50,7 +47,7 @@ const WorkflowProcess: React.FC = () => {
             >
               <Card className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="pt-8 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#2563eb] flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                     {step.step}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">

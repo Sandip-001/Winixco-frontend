@@ -13,7 +13,7 @@ import { hrms } from "@/services/Constants";
 
 const HRAnalytics: React.FC = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-purple-600 to-pink-600 text-white relative overflow-hidden">
+    <section className="py-20 px-4 bg-[#2563eb] text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE4YzAtOS45NC04LjA2LTE4LTE4LTE4UzAgOC4wNiAwIDE4czguMDYgMTggMTggMTggMTgtOC4wNiAxOC0xOCIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
@@ -23,7 +23,7 @@ const HRAnalytics: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center shadow-2xl">
+          <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500 flex items-center justify-center shadow-2xl">
             <BarChart3 className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

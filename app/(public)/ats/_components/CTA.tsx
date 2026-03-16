@@ -13,7 +13,7 @@ import { atsPageData } from "@/services/Constants";
 // CTA Section Component
 const CtaSection: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600">
+    <section className="py-20 bg-[#2563eb] to-pink-600">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

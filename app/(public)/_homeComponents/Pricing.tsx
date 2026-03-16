@@ -5,14 +5,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Check,
-  Sparkles,
-  Zap,
-  Shield,
-  Star,
-  Clock,
-} from "lucide-react";
+import { Check, Sparkles, Zap, Shield, Star, Clock } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 /* ------------------ DATA ------------------ */
@@ -95,26 +88,19 @@ const comparisonData = [
 /* ------------------ HERO ------------------ */
 
 const PricingHero = () => (
-  <section className="py-20 bg-gradient-to-br from-[#c3dbe0] to-white relative overflow-hidden">
+  <section className="py-20 bg-[#2563eb] relative overflow-hidden">
     <div className="max-w-6xl mx-auto px-4 text-center">
-      <Badge className="mb-6 px-6 py-3 bg-gradient-to-r from-[#13afdc] to-[#0d0d0d] text-white border-0 text-base">
+      <Badge className="mb-6 px-6 py-3 bg-white text-[#2563eb] font-bold border-0 text-base">
         <Star className="w-4 h-4 mr-2 inline fill-white" />
         SPECIAL LAUNCH OFFER
       </Badge>
 
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0d0d0d] mb-6">
-        Hire smarter. Track smarter.{" "}
-        <span className="bg-gradient-to-r from-[#13afdc] to-[#0d0d0d] bg-clip-text text-transparent">
-          Manage everything
-        </span>{" "}
-        from one platform.
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+        Hire smarter. Track smarter, Manage everything from one platform.
       </h1>
 
-      <p className="text-xl md:text-2xl text-[#7c7a7c] max-w-4xl mx-auto">
-        One powerful ATS with{" "}
-        <span className="font-bold text-[#13afdc]">
-          FREE HRMS & CRM
-        </span>
+      <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto">
+        One powerful ATS with FREE HRMS & CRM{" "}
       </p>
     </div>
   </section>
@@ -123,15 +109,16 @@ const PricingHero = () => (
 /* ------------------ PRICING CARD ------------------ */
 
 const MainPricingCard = () => {
-  const [billingCycle, setBillingCycle] =
-    useState<"monthly" | "yearly">("monthly");
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
+    "monthly",
+  );
 
   return (
     <section className="py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4">
         <Card className="rounded-3xl shadow-xl border border-[#c3dbe0] overflow-hidden">
           <CardContent className="p-10 text-center">
-            <Badge className="mb-4 px-6 py-2 bg-[#c3dbe0] text-[#0d0d0d]">
+            <Badge className="mb-4 px-6 py-2 bg-blue-50 text-[#2563eb] font-extrabold">
               ALL-IN-ONE PLAN
             </Badge>
 
@@ -145,7 +132,7 @@ const MainPricingCard = () => {
                 onClick={() => setBillingCycle("monthly")}
                 className={`px-6 py-2 rounded-lg font-semibold ${
                   billingCycle === "monthly"
-                    ? "bg-[#13afdc] text-white"
+                    ? "bg-[#2563eb] text-white"
                     : "bg-gray-100 text-[#7c7a7c]"
                 }`}
               >
@@ -155,7 +142,7 @@ const MainPricingCard = () => {
                 onClick={() => setBillingCycle("yearly")}
                 className={`px-6 py-2 rounded-lg font-semibold ${
                   billingCycle === "yearly"
-                    ? "bg-[#13afdc] text-white"
+                    ? "bg-[#2563eb] text-white"
                     : "bg-gray-100 text-[#7c7a7c]"
                 }`}
               >
@@ -181,7 +168,7 @@ const MainPricingCard = () => {
             )}
 
             {/* CTA */}
-            <Button className="mt-8 w-full h-14 text-lg font-bold rounded-xl bg-gradient-to-r from-[#13afdc] to-[#0d0d0d] text-white">
+            <Button className="mt-8 w-full h-14 text-lg font-bold rounded-xl bg-[#2563eb] text-white">
               <Zap className="w-5 h-5 mr-2" />
               Start 30-Day Free Trial
             </Button>
@@ -192,10 +179,10 @@ const MainPricingCard = () => {
                 <div
                   key={i}
                   className={`flex gap-3 p-3 rounded-lg ${
-                    f.highlight ? "bg-[#c3dbe0]" : ""
+                    f.highlight ? "bg-blue-100" : ""
                   }`}
                 >
-                  <Check className="text-[#13afdc]" />
+                  <Check className="text-[#2563eb]" />
                   <span className="text-[#0d0d0d]">{f.text}</span>
                 </div>
               ))}
@@ -218,7 +205,7 @@ const ComparisonTable = () => (
 
       <div className="overflow-x-auto rounded-2xl shadow border border-[#c3dbe0]">
         <table className="w-full">
-          <thead className="bg-gradient-to-r from-[#13afdc] to-[#0d0d0d] text-white">
+          <thead className="bg-[#2563eb] text-white">
             <tr>
               <th className="px-6 py-4 text-left">Feature</th>
               <th className="px-6 py-4 text-center">Winixco</th>
@@ -229,10 +216,7 @@ const ComparisonTable = () => (
           </thead>
           <tbody>
             {comparisonData.map((row, i) => (
-              <tr
-                key={i}
-                className={i % 2 ? "bg-[#f7fbfc]" : "bg-white"}
-              >
+              <tr key={i} className={i % 2 ? "bg-[#f7fbfc]" : "bg-white"}>
                 <td className="px-6 py-4 font-medium text-[#0d0d0d]">
                   {row.feature}
                 </td>
@@ -268,12 +252,12 @@ const CtaSection = () => {
         <h2 className="text-4xl font-bold text-[#0d0d0d] mb-6">
           Need Bulk Pricing or a Demo?
         </h2>
-        <p className="text-xl text-[#7c7a7c] mb-8">
+        <p className="text-xl text-black mb-8">
           Talk to our sales team for custom enterprise plans
         </p>
 
         <Button
-          className="bg-[#13afdc] text-white px-10 py-6 text-lg"
+          className="bg-[#2563eb] text-white px-10 py-6 text-lg"
           onClick={() => router.push("/contact")}
         >
           Contact Us

@@ -21,15 +21,13 @@ const ModulesOverview: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">
+          <Badge className="mb-4 bg-blue-50 text-[#2563eb] border-blue-200">
             Core CRM Features
           </Badge>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            CRM{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Modules Overview
-            </span>
+            CRM Modules Overview{" "}
+            
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

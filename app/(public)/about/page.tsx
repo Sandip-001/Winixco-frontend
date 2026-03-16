@@ -62,7 +62,7 @@ export default function AboutUs() {
           
           className="bg-white p-10 rounded-3xl shadow-xl border"
         >
-          <Lightbulb className="w-12 h-12 text-purple-600 mb-4" />
+          <Lightbulb className="w-12 h-12 text-blue-600 mb-4" />
           <h3 className="text-3xl font-semibold mb-3">Our Vision</h3>
           <p className="text-gray-600 text-lg leading-relaxed">
             To be a global leader in CRM innovation — transforming how teams connect,
@@ -147,7 +147,7 @@ export default function AboutUs() {
       </section> */}
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 text-center text-white">
+      <section className="py-24 bg-[#2563eb] text-center text-white">
         <h2 className="text-4xl font-bold mb-4">We Grow Together</h2>
         <p className="text-lg max-w-2xl mx-auto mb-8">
           Become part of a story that’s transforming the future of CRM.

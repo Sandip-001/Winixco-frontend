@@ -10,7 +10,7 @@ import { crm } from "@/services/Constants";
 
 const FinalCTA: React.FC = () => {
   return (
-    <section className="relative py-24 px-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden">
+    <section className="relative py-24 px-6 bg-[#2563eb] text-white overflow-hidden">
       {/* Animated Background Pattern */}
       <motion.div
         aria-hidden

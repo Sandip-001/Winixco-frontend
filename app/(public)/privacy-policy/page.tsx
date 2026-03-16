@@ -7,20 +7,20 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="bg-gray-50">
       {/* HEADER SECTION */}
-      <section className="bg-sky-200 text-gray-900 py-20 px-6">
+      <section className="bg-[#2563eb] text-gray-900 py-20 px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-5xl mx-auto text-center"
         >
           <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-white/20 backdrop-blur-xl rounded-3xl shadow-2xl">
-            <Shield className="w-10 h-10" />
+            <Shield className="w-10 h-10 text-white" />
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
             Privacy Policy
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white">
             Your trust matters. We protect your data with top-tier security,
             transparency, and compliance.
           </p>

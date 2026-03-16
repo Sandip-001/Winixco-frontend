@@ -49,7 +49,7 @@ const Header = () => {
               <motion.div key={item.name} whileHover={{ scale: 1.05 }}>
                 <Link
                   href={item.href}
-                  className="text-gray-700 hover:text-[#1FC8DB] font-medium"
+                  className="text-gray-700 hover:text-[#2563eb] font-medium"
                 >
                   {item.name}
                 </Link>
@@ -62,11 +62,7 @@ const Header = () => {
               Sign In
             </Button>
             <Button
-              className="text-white font-medium"
-              style={{
-                background:
-                  "linear-gradient(90deg, #1FC8DB 0%, #7FD8E7 100%)",
-              }}
+              className="text-white font-medium bg-[#2563eb]"
             >
               Start Free Trial
             </Button>
@@ -104,11 +100,8 @@ const Header = () => {
                 Sign In
               </Button>
               <Button
-                className="w-full text-white"
-                style={{
-                  background:
-                    "linear-gradient(90deg, #1FC8DB 0%, #7FD8E7 100%)",
-                }}
+                className="w-full text-white bg-[#2563eb]"
+                
               >
                 Start Free Trial
               </Button>

@@ -19,16 +19,13 @@ const FAQ = () => {
     >
       <div className="max-w-4xl mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-[#13afdc]/10 text-[#13afdc] rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-2 bg-blue-50 text-[#2563eb] rounded-full text-sm font-semibold mb-4">
             FAQ
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0d0d0d]">
-            Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-[#13afdc] to-[#0d0d0d] bg-clip-text text-transparent">
-              Questions
-            </span>
+            Frequently Asked Questions
           </h2>
-          <p className="text-xl text-[#7c7a7c]">
+          <p className="text-xl text-black">
             Everything you need to know about Winixco
           </p>
         </AnimatedSection>

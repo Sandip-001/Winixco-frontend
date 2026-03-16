@@ -34,7 +34,7 @@ const HRMSHero: React.FC = () => {
             </Badge>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900 mb-6">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-gray-900 ">
                 Modern HRMS
               </span>
               <br />
@@ -48,7 +48,7 @@ const HRMSHero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+                className="bg-[#2563eb] hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
               >
                 {hrms.hero.ctaPrimary} <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -88,7 +88,7 @@ const HRMSHero: React.FC = () => {
               />
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-600 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#2563eb] rounded-xl flex items-center justify-center">
                     <UserCheck className="w-7 h-7 text-white" />
                   </div>
                   <div>

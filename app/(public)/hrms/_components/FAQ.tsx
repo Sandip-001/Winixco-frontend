@@ -22,14 +22,12 @@ const FAQSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">
+          <Badge className="mb-4 bg-blue-50 text-[#2563eb] border-blue-200">
             FAQ
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Questions
-            </span>
+            Frequently Asked Questions
+            
           </h2>
           <p className="text-xl text-gray-600">
             Everything you need to know about our HRMS platform

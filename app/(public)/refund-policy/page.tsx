@@ -7,7 +7,7 @@ export default function RefundCancellationPage() {
   return (
     <div className="bg-gray-50">
       {/* HEADER SECTION */}
-      <section className="bg-sky-200 text-gray-900 py-20 px-6">
+      <section className="bg-[#2563eb] text-white py-20 px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

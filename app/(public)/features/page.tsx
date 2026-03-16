@@ -54,10 +54,7 @@ export default function FeaturesPage() {
       {/* HERO */}
       <section className="py-24 text-center px-6 bg-gradient-to-b from-white to-blue-50">
         <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">
-          Powerful Features to Turbocharge Your{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Hiring & CRM
-          </span>
+          Powerful Features to Turbocharge Your Hiring & CRM
         </h1>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
           Everything you need to streamline recruitment, manage clients and
@@ -73,7 +70,7 @@ export default function FeaturesPage() {
               key={i}
               className="p-8 bg-white rounded-3xl border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white flex items-center justify-center shadow-md mb-5">
+              <div className="w-14 h-14 rounded-xl bg-[#2563eb] text-white flex items-center justify-center shadow-md mb-5">
                 <feature.icon className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -86,7 +83,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA STRIP */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 to-purple-700 text-white text-center px-6">
+      <section className="py-20 bg-[#2563eb] text-white text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Experience The Future of Hiring & Client Management
         </h2>

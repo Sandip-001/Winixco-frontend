@@ -31,7 +31,7 @@ const HappyCustomers: React.FC = () => (
           </h2>
           <Button
             size="lg"
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+            className="bg-[#2563eb] hover:from-purple-700 hover:to-blue-700 text-white"
           >
             Try for FREE
           </Button>
@@ -40,7 +40,7 @@ const HappyCustomers: React.FC = () => (
         <div>
           <div className="flex items-center gap-4 mb-8">
             <div className="flex items-center gap-2">
-              <Users className="w-8 h-8 text-purple-600" />
+              <Users className="w-8 h-8 text-[#2563eb]" />
               <div>
                 <p className="text-3xl font-bold text-gray-900">{CONTACT_DATA.customers.count}</p>
                 <p className="text-sm text-gray-600">{CONTACT_DATA.customers.label}</p>

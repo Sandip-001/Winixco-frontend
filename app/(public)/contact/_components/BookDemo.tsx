@@ -29,10 +29,7 @@ const BookDemoSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-extrabold text-gray-900"
         >
-          🗓️ Book a Demo or{" "}
-          <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Consultation
-          </span>
+          🗓️ Book a Demo or Consultation
         </motion.h2>
 
         <motion.p
@@ -52,7 +49,7 @@ const BookDemoSection = () => {
         >
           {features.map((item, index) => (
             <div key={index} className="flex items-center gap-3">
-              <CheckCircle className="text-purple-600 w-6 h-6" />
+              <CheckCircle className="text-[#2563eb] w-6 h-6" />
               <p className="text-gray-700 font-medium">{item}</p>
             </div>
           ))}
@@ -66,7 +63,7 @@ const BookDemoSection = () => {
         >
           <Button
             size="lg"
-            className="px-9 py-6 text-lg rounded-xl font-bold shadow-xl bg-purple-600 text-white hover:bg-purple-700 hover:scale-105 transition-transform"
+            className="px-9 py-6 text-lg rounded-xl font-bold shadow-xl bg-[#2563eb] hover:bg-blue-700 hover:scale-105 transition-transform"
           >
             <CalendarCheck className="mr-2 w-5 h-5" />
             Book My Demo
@@ -74,7 +71,7 @@ const BookDemoSection = () => {
           <Button
             variant="outline"
             size="lg"
-            className="px-9 py-6 text-lg rounded-xl font-bold border-2 text-purple-700 hover:bg-purple-100 transition-all"
+            className="px-9 py-6 text-lg rounded-xl font-bold border-2 text-blue-700 hover:bg-purple-100 transition-all"
           >
             <Send className="mr-2 w-5 h-5" />
             Contact Sales
