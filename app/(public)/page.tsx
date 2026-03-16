@@ -27,7 +27,7 @@ export default function Page() {
       <ModulesSection />
       <TestimonialsSection />
       <Benefits />
-      <Testimonials />
+      
       <Pricing />
       <HowItWorks />
       <FAQ />
