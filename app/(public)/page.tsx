@@ -15,6 +15,7 @@ import HowItWorks from "./_homeComponents/HowItWorks";
 import HeroSection from "./_homeComponents/HeroSection";
 import StatsSection from "./_homeComponents/StatsSection";
 import TestimonialsSection from "./_homeComponents/TestiMonialSection";
+import PricingSection from "./_homeComponents/PricingSection";
 
 export default function Page() {
   return (
@@ -27,8 +28,7 @@ export default function Page() {
       <ModulesSection />
       <TestimonialsSection />
       <Benefits />
-      
-      <Pricing />
+      <PricingSection />
       <HowItWorks />
       <FAQ />
       <CTA />

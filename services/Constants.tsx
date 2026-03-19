@@ -148,12 +148,13 @@ export interface HomeContent {
 
 export const home: HomeContent = {
   navigation: [
+    { name: "About", href: "/about" },
     {name: "Services", href: "/services"},
     { name: "Features", href: "/features" },
+    { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blogs" },
     { name: "Careers", href: "/careers" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    
   ],
 
   companies: [
@@ -195,7 +196,7 @@ export const home: HomeContent = {
     {
       //icon: <Clock className="w-6 h-6" />,
       icon: "🤝",
-      title: "Recruitment CRM",
+      title: "Recruitment ATS",
       description:
         "Build and nurture your talent community. Stay connected with passive candidates for future opportunities.",
       color: "from-indigo-500 to-purple-500",
@@ -321,7 +322,7 @@ export const home: HomeContent = {
 
   module : {
     badge: "OUR SOLUTIONS",
-    title: "Modules We Offers",
+    title: "Services We Offer",
     subtitle:
       "Powerful tools designed to streamline your recruitment and HR operations",
     modules: [

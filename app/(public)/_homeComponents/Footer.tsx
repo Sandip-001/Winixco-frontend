@@ -36,7 +36,7 @@ const footerLinks = [
       { label: "Privacy Policy", url: "/privacy-policy" },
       { label: "Terms of Service", url: "/terms-and-conditions" },
       { label: "Refund Policy", url: "/refund-policy" },
-      { label: "GDPR & Cookies", url: "/gdpr-cookies" },
+      //{ label: "GDPR & Cookies", url: "/gdpr-cookies"},
     ],
   },
 ];

@@ -6,72 +6,74 @@ const leaders = [
   {
     name: "Amit Sharma",
     role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=400&q=80",
+    image:
+      "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=400&q=80",
     linkedin: "#",
   },
   {
     name: "Neha Verma",
     role: "Head of Product",
-    image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=400&q=80",
+    image:
+      "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=400&q=80",
     linkedin: "#",
   },
   {
     name: "Rahul Mehta",
     role: "CTO",
-    image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=400&q=80",
+    image:
+      "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=faces&fit=crop&w=400&q=80",
     linkedin: "#",
   },
 ];
 
-
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
-
       {/* HERO */}
       <section className="py-28 bg-gradient-to-b from-white to-blue-50 text-center">
-        <h1
-          
-          className="text-5xl font-bold mb-6"
-        >
+        <h1 className="text-5xl font-bold mb-6">
           Empowering Businesses with Smart CRM Innovation
         </h1>
-        <p
-          
-          className="text-xl max-w-3xl mx-auto"
-        >
-          We help companies build stronger customer relationships through intelligent automation and seamless workflows.
+        <p className="text-xl max-w-3xl mx-auto">
+          We help companies build stronger customer relationships through
+          intelligent automation and seamless workflows.
         </p>
       </section>
 
       {/* OUR MISSION / VISION */}
       <section className="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-        <div
-          
-          className="bg-white p-10 rounded-3xl shadow-xl border"
-        >
+        <div className="bg-white p-10 rounded-3xl shadow-xl border">
           <Target className="w-12 h-12 text-blue-600 mb-4" />
-          <h3 className="text-3xl font-semibold mb-3">Our Mission</h3>
+          <h3 className="text-3xl font-semibold mb-3">Mission</h3>
           <p className="text-gray-600 text-lg leading-relaxed">
-            To simplify customer management through powerful yet user-friendly CRM tools,
-            enabling businesses of every size to scale faster and smarter.
+            At Winixco, our mission is to develop innovative and accessible
+            AI-driven platforms that transform how businesses hire, manage
+            people, and grow customer relationships. <br />
+            We aim to deliver powerful yet easy-to-use solutions such as
+            AI-powered ATS, HRMS, CRM, and digital automation tools that help
+            organizations streamline operations, reduce costs, and achieve
+            sustainable growth.
+            <br />
+            Through continuous innovation, customer-centric design, and
+            cutting-edge technology, Winixco strives to be a trusted partner in
+            digital transformation for companies worldwide.
           </p>
         </div>
 
-        <div
-          
-          className="bg-white p-10 rounded-3xl shadow-xl border"
-        >
+        <div className="bg-white p-10 rounded-3xl shadow-xl border">
           <Lightbulb className="w-12 h-12 text-blue-600 mb-4" />
-          <h3 className="text-3xl font-semibold mb-3">Our Vision</h3>
+          <h3 className="text-3xl font-semibold mb-3">Vision</h3>
           <p className="text-gray-600 text-lg leading-relaxed">
-            To be a global leader in CRM innovation — transforming how teams connect,
-            collaborate and grow with their customers.
+            To become a global leader in AI-powered business automation by
+            empowering organizations with intelligent technology that simplifies
+            recruitment, workforce management, and customer engagement. <br />
+            Winixco envisions a future where businesses of all sizes can
+            leverage advanced AI solutions to make smarter decisions, increase
+            productivity, and build scalable, efficient operations.
           </p>
         </div>
       </section>
 
-      
       {/* COMPANY STORY TIMELINE }
       <section className="py-24 bg-white">
         <div className="text-center mb-16">
@@ -159,7 +161,6 @@ export default function AboutUs() {
           Explore Careers
         </Link>
       </section>
-
     </div>
   );
 }

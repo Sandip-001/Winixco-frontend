@@ -19,7 +19,7 @@ const Features = () => {
           </span>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0d0d0d]">
-            Powerful Features Built for Modern Recruiting
+            Powerful AI Driven Features to Turbocharge your Hiring Process
           </h2>
 
           <p className="text-xl text-[#7c7a7c] max-w-3xl mx-auto">

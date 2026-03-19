@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import DemoModal from "./DemoModal";
 
 export default function HeroSection() {
   const router = useRouter();
@@ -34,12 +35,16 @@ export default function HeroSection() {
               Start Free Trial
             </Button>
 
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto border-[#2563eb] text-[#2563eb] px-8 py-6 text-base rounded-xl"
-            >
-              Schedule Demo
-            </Button>
+            <DemoModal
+              trigger={
+                <Button
+                  variant="outline"
+                  className="w-full sm:w-auto border-[#2563eb] text-[#2563eb] px-8 py-6 text-base rounded-xl"
+                >
+                  Schedule Demo
+                </Button>
+              }
+            />
           </div>
         </motion.div>
 

@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { home } from "@/services/Constants";
 import { useRouter } from "next/navigation";
+import DemoModal from "./DemoModal";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +20,7 @@ const Header = () => {
   }, []);
 
   // Remove Blogs and Careers
-  const navigation = home.navigation.filter(
-    (item) => item.name !== "Blog" && item.name !== "Careers"
-  );
+  const navigation = home.navigation.filter((item) => item.name !== "Blog");
 
   return (
     <motion.header
@@ -33,7 +32,6 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link href="/">
@@ -60,9 +58,15 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
+            <DemoModal
+              trigger={
+                <Button className="text-white bg-[#2563eb]">Book Demo</Button>
+              }
+            />
+
             <Button
               className="text-white font-medium bg-[#2563eb]"
-              onClick={()=>router.push("#pricing")}
+              onClick={() => router.push("#pricing")}
             >
               Start Free Trial
             </Button>
@@ -96,10 +100,17 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              <DemoModal
+                trigger={
+                  <Button className="w-full text-white bg-[#2563eb]">
+                    Book Demo
+                  </Button>
+                }
+              />
+
               <Button
                 className="w-full text-white bg-[#2563eb]"
-                onClick={()=>router.push("#pricing")}
-                
+                onClick={() => router.push("#pricing")}
               >
                 Start Free Trial
               </Button>
